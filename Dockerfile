@@ -3,5 +3,5 @@ EXPOSE 8080
 WORKDIR /app
 COPY wiremock-standalone-2.14.0.jar .
 RUN mkdir mappings
-COPY stub.json mappings/
+COPY *.json mappings/
 ENTRYPOINT ["java","-jar","wiremock-standalone-2.14.0.jar"]
